@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2021_09_03_085838) do
   end
 
   create_table "likes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
