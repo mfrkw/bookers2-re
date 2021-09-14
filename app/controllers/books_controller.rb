@@ -4,9 +4,10 @@ class BooksController < ApplicationController
     @books =Book.all
   end
   def show
-    @book= Book.find(params[:id])
-    @user= @book_user
-
+    @book = Book.find(params[:id])
+    @book_new = Book.new
+    @user = @book.user.find(params[:id])
+    # @book_comment = BookComment.new
   end
 
   def create
